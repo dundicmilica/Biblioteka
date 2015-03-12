@@ -1,30 +1,33 @@
 package biblioteka;
 
+import java.util.LinkedList;
+
 public class Knjiga {
 	
-	private String Naslov;
-	private String autori;
-	private String Izdavac;
+	private String naslov;
+	private String izdavac;
 	private long ISBN;
 	private int izdanje;
 	
-	public String getNaslov() {
-		return Naslov;
-	}
-	public void setNaslov(String naslov) {
-		Naslov = naslov;
-	}
-	public String getAutori() {
+	private LinkedList<Autor> autori = new LinkedList<Autor>();
+	
+	public LinkedList<Autor> getAutori() {
 		return autori;
 	}
-	public void setAutori(String autori) {
+	public void setAutori(LinkedList<Autor> autori) {
 		this.autori = autori;
 	}
+	public String getNaslov() {
+		return naslov;
+	}
+	public void setNaslov(String naslov) {
+		this.naslov = naslov;
+	}
 	public String getIzdavac() {
-		return Izdavac;
+		return izdavac;
 	}
 	public void setIzdavac(String izdavac) {
-		Izdavac = izdavac;
+		this.izdavac = izdavac;
 	}
 	public long getISBN() {
 		return ISBN;
